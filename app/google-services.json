@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "70060724754",
+    "project_id": "smart-location-finder-391612",
+    "storage_bucket": "smart-location-finder-391612.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70060724754:android:0bc896451f39801c263ecb",
+        "android_client_info": {
+          "package_name": "com.coderbd.smartlocationfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70060724754-nunk4adjafucpana46rnr82v6mj2g1g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFQuwGlHHllLjEW1Xiai0IY2LzFCIagZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70060724754-nunk4adjafucpana46rnr82v6mj2g1g3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
