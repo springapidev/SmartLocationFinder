@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="392dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="Add New Location"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:layout_below="@id/textview"/>
+
+    <EditText
+        android:id="@+id/location_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Location name"
+        android:textSize="25sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:layout_below="@id/spinner"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location_name"
+        android:textSize="25sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:hint="Lat: "/>
+     <TextView
+        android:id="@+id/lon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_below="@id/lat"
+         android:textSize="25sp"
+         android:paddingLeft="10sp"
+         android:paddingRight="10sp"
+         android:hint="Lon: "/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lon"
+        android:layout_margin="15dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/okay_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100dp"
+            android:text="Add"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/cancel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="100dp"
+            android:layout_toRightOf="@id/okay_text"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
