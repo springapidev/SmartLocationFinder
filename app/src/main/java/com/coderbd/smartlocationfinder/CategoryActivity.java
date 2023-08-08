@@ -33,18 +33,22 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String categoryName = cName.getText().toString();
-                writeNewUser(categoryName);
-                Toast.makeText(CategoryActivity.this, "Success", Toast.LENGTH_SHORT).show();
-                loadData();
+                if(categoryName != null && categoryName.length() < 3){
+                    Toast.makeText(CategoryActivity.this, "Enter Category name", Toast.LENGTH_SHORT).show();
+                }else {
+                    writeNewUser(categoryName);
+                    Toast.makeText(CategoryActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                    loadData();
+                }
             }
         });
         listviews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 CategoryDatabaseHandler db = new CategoryDatabaseHandler(getApplicationContext());
-                db.deleteData(new Category(position + 1));
+                db.deleteData(new Category((int)id ));
                 Toast.makeText(CategoryActivity.this,
-                        "Data " + position + " deleted",
+                        "Data " + id + " deleted",
                         Toast.LENGTH_SHORT).show();
                 loadData();
             }

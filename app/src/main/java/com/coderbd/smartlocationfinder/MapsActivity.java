@@ -52,6 +52,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     TextView okay_text, cancel_text, latView, lonView;
     Spinner spinnerCate;
     EditText locationName;
+    List<LocationData> locationDataList=new ArrayList<>();
 
 
     // Ask for All permissions
@@ -137,12 +138,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 LocationDataDatabaseHandler db = new LocationDataDatabaseHandler(getApplicationContext());
-List<LocationData> locationDataList = db.getAllLocations();
+locationDataList = db.getAllLocations();
         // Add More Markers
         for(LocationData locationData : locationDataList){
             LatLng latLng = new LatLng(Double.parseDouble(locationData.getLat()), Double.parseDouble(locationData.getLon()));
             locations.add(latLng);
-            }
+            latLng = null;
+        }
 //        locations.add(new LatLng(22.820000, 89.550003));//Khulna
 //        locations.add(new LatLng(23.999941, 90.420273));//Gazipur
 //        locations.add(new LatLng(23.643999, 88.855637));//Chuadanga
@@ -263,7 +265,7 @@ List<LocationData> locationDataList = db.getAllLocations();
 //        mMap.setMinZoomPreference(9);
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(currentLocation));
         for (int i = 0; i < locations.size(); i++) {
-            mMap.addMarker(new MarkerOptions().position(locations.get(i)).title("DMPI Marker"));
+            mMap.addMarker(new MarkerOptions().position(locations.get(i)).title(locationDataList.get(i).getName()));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(15.0f));
             mMap.moveCamera(CameraUpdateFactory.newLatLng(locations.get(i)));
         }
