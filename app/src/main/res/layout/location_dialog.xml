@@ -42,6 +42,7 @@
         android:layout_below="@id/location_name"
         android:textSize="25sp"
         android:paddingLeft="10sp"
+        android:textColor="@color/black"
         android:paddingRight="10sp"
         android:hint="Lat: "/>
      <TextView
@@ -51,6 +52,7 @@
          android:layout_below="@id/lat"
          android:textSize="25sp"
          android:paddingLeft="10sp"
+         android:textColor="@color/black"
          android:paddingRight="10sp"
          android:hint="Lon: "/>
 

@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15sp"
         android:layout_weight="1"
+        android:textColor="@color/black"
         android:background="@color/cardview_light_background"
         android:hint="Enter Email Address"
         android:padding="10sp" />
@@ -42,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15sp"
+        android:textColor="@color/black"
         android:layout_weight="1"
         android:background="@color/cardview_light_background"
         android:hint="Enter Password"
